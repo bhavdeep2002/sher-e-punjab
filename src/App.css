@@ -1,38 +1,295 @@
-.App {
-  text-align: center;
+html ,body{
+  overflow-x: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.my-navbar{
+  color: white;
+  background-color: black;
   display: flex;
-  flex-direction: column;
+ }
+ .my-navlink{
+  display: flex;
+   gap: 50px;
+   list-style: none;
+   padding: 0px;
+   margin:27px 27px;display: flex;
+}
+ .icon{
+  margin-top: 1%;
+ }
+.services{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 50px 0;
+}
+.service-list{
+  padding: 0px;
+  list-style: none;
+  margin-top: 24px;
+}
+h2{
+ font-weight: bolder !important;
+ font-size: 17px !important;
+}
+.usp{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding-top: 44px;
+      font-size: 20px;
+      font-weight: bolder;
+}
+.usp-container {
+  background-color: rgba(255, 255, 255, 0.5); ;
+  display: flex;
+  align-items: center;  /* Aligns image & text properly */
+  padding: 20px;        /* Adds spacing inside the container */
+  min-height: 20vh;     /* Allows it to expand if needed */
+  max-width: 800px;     /* Optional: Set a max width */
+  margin: auto;         /* Centers it */
+  border-radius: 10px;  /* Optional: Adds rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Improves look */
+}
+
+.text {
+  flex: 1;              /* Allows text to fill available space */
+  overflow: hidden;     /* Prevents accidental overflow */
+  align-self: flex-start;
+  font-size: 1.3rem;
+}
+
+.usp-container img {
+  width: 100px;
+  height: auto;         /* Keeps aspect ratio */
+  margin-right: 20px;   /* Adds spacing between image and text */
+  align-self: flex-start;
+}
+
+.text p {
+  margin: 5px 0 0;      /* Adds spacing after heading */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.service-list>li{
+font-weight: 600;
+margin-bottom: 20px;
+
+}
+.tick{
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0;
+}
+.phone-icon-circle {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #4CAF50;  /* Green background */
+  border-radius: 50%;
+  margin-right: 8px;  /* Space between icon and text */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.phone-icon-circle svg {
+  transition: fill 0.3s ease;
+}
+
+/* Hover effect */
+.phone-icon-circle:hover {
+  background-color: #2E7D32;  /* Darker green */
+  transform: scale(1.1);
+}
+
+.phone-icon-circle:hover svg {
+  fill: yellow;  /* Change icon color on hover */
+}
+.phone-para{
+  font-size: 17px;
+}
+h3{
+  font-size: 24px !important;
+}
+.footer-container{
+  padding: 1% 11% 1% 11%;
+  background-color: black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.my-footer{
+    color: white;
+    display: flex;
+    justify-content: space-between;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-links{
+  display: flex;
+  list-style: none;
 }
+.footer-links>li{
+  font-size: 12px;
+  margin-top: 15px;
+  width: 100px;
+  padding: 0px;
+}
+.social-media{
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-media>a{
+  text-decoration: none;
+  color: white;
+}
+.bottom-name{
+  margin: 6% 0% 2% 4%;
+  font-size: 20px;
+  font-weight: 700;
+}
+.phone-caller{
+  position: sticky;
+  bottom: 0px;
+}
+hr {
+  color: white !important;
+  margin-top: 4% !important;
+  margin-bottom: 4% !important;
+  opacity: unset !important;
+}
+/* for small smart phones */
+@media only screen and (max-width:376px) {
+hr{
+  margin-top: 2.4% !important;
+  margin-bottom: 2.4% !important;
+}
+  
+}
+/* for smartphones */
+  @media only screen and (max-width:767px){
+    .my-footer{
+      display: block;
+    }
+    .social-media>a>svg{
+      width: 30px !important;
+      height: 30px !important;
+    }
+    .footer-links{
+      padding-left: 5%;
+      justify-content: space-between;
+    }
+    .my-footer>.my-logo{
+      width: 90%;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+    .bottom-name{
+      text-align: center;
+    }
+    .footer-container{
+      padding-top:6% ;
+      padding-bottom:6% ;
+    }
+    .icon{
+      width: 15%;
+      display: block;
+      position: absolute;
+      right: 10px;
+    }
+    .my-logo{
+      width: 240px;
+    }
+    .my-navlink-container{
+      display: none;
+    }
+    .vertical-my-navlink-container{
+      display: block;
+      margin-top: -1%;
+      transition: height 2s;
+      background-color:black;
+      display: flex;
+      justify-content: flex-start;
+     }
+     .vertical-my-navlink{
+      list-style: none;
+      width: 90%;
+     }
+     .vertical-my-navlink >li>a{
+      font-weight: 700;
+      font-style: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 12px;
+      color: white;
+     }
+  }
+/* for tablets */
+  @media screen and (max-width: 1023px) and (min-width:768px){
+    .tablet{
+      width: 100% !important;
+    }
+    .icon{
+      width:10%;
+      display: block;
+      position: absolute;
+      right: 1%;
+    }
+    .my-logo{
+      width: 325px;
+    }
+    .my-navlink-container{
+      display: none;
+    }
+    .vertical-my-navlink-container{
+      display: block;
+      margin-top: -1%;
+      transition: height 2s;
+      background-color:black;
+      display: flex;
+      transition: height 2s;
+      justify-content: space-evenly;
+     }
+     .vertical-my-navlink{
+      list-style: none;
+     }
+     .vertical-my-navlink >li>a{
+      font-weight: 700;
+      font-style: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 24px;
+      color: white;
+     }
+  }
+
+  /* for laptop and desktops */
+@media only screen and (min-width: 1024px) {
+  h2{
+    font-size: 25px !important;
+  }
+  .service-list>li{
+    font-size: 90%;
+  }
+  
+  .my-navlink >li>a{
+   font-weight: 700;
+   font-style: normal;
+   text-transform: uppercase;
+   text-decoration: none;
+   font-size: 15px;
+   color: white;
+  }
+  .my-navlink-container{
+   display: block;
+   position: absolute;
+   right: 2%;
+  }
+  .vertical-my-navlink-container{
+    display: none;
+  }
+  .icon{
+   display: none;
+  }
+  .my-logo{
+    width: 325px;
+  }
+ }
