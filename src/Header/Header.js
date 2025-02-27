@@ -33,6 +33,9 @@ export default function Header() {
     else if(window.innerWidth===320 && window.innerHeight===568){
       setVertical((prev) => prev === 30 ? 0 : 30)
     }
+    else if(window.innerWidth/window.innerHeight>=0.694 && window.innerWidth/window.innerHeight<=0.75){
+      setVertical((prev) => prev === 30 ? 0 : 30)
+    }
     else{
     setVertical((prev) => prev === 25 ? 0 : 25)
     }
@@ -43,13 +46,13 @@ export default function Header() {
         <div className='col-md-12'>
           <div className='my-navbar'>
             <div className='my-logo'>
-              <img style={{ width: "100%" }} src='/image/text5.jpg' alt='logo' />
+              <img style={{ width: "100%" }} src='/image/logotext2.JPG' alt='logo' />
             </div>
             <div className='my-navlink-container'>
               <ul className='my-navlink'>
               {navlink.map((li,index)=>{
-                return <li key={index}><a href='#'>{li}</a></li>
-              })}   
+                return <><li key={index}><a href={li.link}>{li.text}</a></li><hr /></ >
+              })} 
               </ul>
             </div>
             <div onClick={collapse} className='icon'>
@@ -59,7 +62,7 @@ export default function Header() {
           <div style={{ height: vertheight + "vh" }} className='vertical-my-navlink-container'>
             <ul  className='vertical-my-navlink'>
               {navlink.map((li,index)=>{
-                return <><li key={index}><a href='#'>{li}</a></li><hr /></ >
+                return <><li key={index}><a href={li.link}>{li.text}</a></li><hr /></ >
               })}          
             </ul>
           </div>

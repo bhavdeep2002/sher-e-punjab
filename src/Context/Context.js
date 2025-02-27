@@ -7,8 +7,8 @@ const USP =createContext([{head:"TASTE",para:"Our Home Chefs have exceptional cu
     {head:"VARIETY",para:"Our Home Chefs come from all parts of the country to create a Food Culture of Diversity and uniting everyone with Food. The endless variety of cuisines and bakery items from across the country will leave you drooling. We offer you a Curated Menu of over 1000+ Authentic Dishes.",img:"/image/Variety.png"}
 ])
 const Navlink =createContext([
-    "HOME",
-    "Who ARE WE",
-    "DELIVERY AREAS",
-    "CONTACT US"])
+    {text:"HOME",link:"#"},
+    {text:"ABOUT US",link:"#about-us"},
+    {text:"DELIVERY AREAS",link:"#"},
+    {text:"EMAIL US",link:"https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=Sherepunjabrestaurant616@gmail.com"}])
 export { ServiceData1 ,ServiceData2 ,Navlink,USP}

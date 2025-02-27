@@ -3,7 +3,7 @@ html ,body{
 }
 .my-navbar{
   color: white;
-  background-color: black;
+  background-color: #303434;
   display: flex;
  }
  .my-navlink{
@@ -115,7 +115,7 @@ h3{
 }
 .footer-container{
   padding: 1% 11% 1% 11%;
-  background-color: black;
+  background-color: #303434;
   color: white;
 }
 .my-footer{
@@ -133,6 +133,10 @@ h3{
   width: 100px;
   padding: 0px;
 }
+.footer-links>li>a{
+  text-decoration: none;
+  color: white;
+}
 .social-media{
   display: flex;
   justify-content: space-evenly;
@@ -141,10 +145,12 @@ h3{
   text-decoration: none;
   color: white;
 }
-.bottom-name{
+.address{
   margin: 6% 0% 2% 4%;
   font-size: 20px;
   font-weight: 700;
+  display: flex;
+  gap: 10px;
 }
 .phone-caller{
   position: sticky;
@@ -156,6 +162,27 @@ hr {
   margin-bottom: 4% !important;
   opacity: unset !important;
 }
+.phone{
+  width: 50px;
+  height: 50px;
+  border-radius: 2rem;
+  padding: 10px;
+  background-color: green;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+.whattsapp{
+  width: 50px;
+  height: 50px;
+  border-radius: 2rem;
+  padding: 10px;
+  background-color: green;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
 /* for small smart phones */
 @media only screen and (max-width:376px) {
 hr{
@@ -182,7 +209,7 @@ hr{
       margin-left: 3%;
       margin-right: 3%;
     }
-    .bottom-name{
+    .address{
       text-align: center;
     }
     .footer-container{
@@ -205,7 +232,7 @@ hr{
       display: block;
       margin-top: -1%;
       transition: height 2s;
-      background-color:black;
+      background-color:#303434;
       display: flex;
       justify-content: flex-start;
      }
@@ -232,6 +259,7 @@ hr{
       display: block;
       position: absolute;
       right: 1%;
+      margin-top: 0.5%;
     }
     .my-logo{
       width: 325px;
@@ -243,20 +271,20 @@ hr{
       display: block;
       margin-top: -1%;
       transition: height 2s;
-      background-color:black;
+      background-color:#303434;
       display: flex;
-      transition: height 2s;
-      justify-content: space-evenly;
+      justify-content: flex-start;
      }
      .vertical-my-navlink{
       list-style: none;
+      width: 90%;
      }
      .vertical-my-navlink >li>a{
       font-weight: 700;
       font-style: normal;
       text-transform: uppercase;
       text-decoration: none;
-      font-size: 24px;
+      font-size: 12px;
       color: white;
      }
   }
