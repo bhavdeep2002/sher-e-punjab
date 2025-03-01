@@ -62,7 +62,7 @@ export default function Header() {
           <div style={{ height: vertheight + "vh" }} className='vertical-my-navlink-container'>
             <ul  className='vertical-my-navlink'>
               {navlink.map((li,index)=>{
-                return <><li key={index}><a href={li.link}>{li.text}</a></li><hr /></ >
+                return <><li key={index}>{li.text==='EMAIL US'?<a href={li.link2}>{li.text}</a>:<a href={li.link}>{li.text}</a>}</li><hr /></ >
               })}          
             </ul>
           </div>

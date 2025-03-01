@@ -10,5 +10,5 @@ const Navlink =createContext([
     {text:"HOME",link:"#"},
     {text:"ABOUT US",link:"#about-us"},
     {text:"DELIVERY AREAS",link:"#"},
-    {text:"EMAIL US",link:"https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=Sherepunjabrestaurant616@gmail.com"}])
+    {text:"EMAIL US",link:"https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=Sherepunjabrestaurant616@gmail.com", link2:"gmail://co?to=Sherepunjabrestaurant616@gmail.com"}])
 export { ServiceData1 ,ServiceData2 ,Navlink,USP}
