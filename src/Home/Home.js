@@ -2,8 +2,9 @@ import React from 'react'
 import Header from '../Header/Header'
 import Main from '../Main/Main'
 import Footer from '../Footer/Footer'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AboutUS from '../AboutUs/AboutUs'
+import DeliveryArea from '../DeliveryArea/DeliveryArea'
 
 export default function Home() {
   return (
@@ -12,7 +13,13 @@ export default function Home() {
         <Header />
       </div>
       <div className='row'>
-        <Main />
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Main />} />
+            <Route path='/about-us' element={<AboutUS />} />
+            <Route path='/delivery-area' element={<DeliveryArea />} />
+          </Routes>
+        </BrowserRouter>
       </div>
       <div className='row'>
         <Footer />

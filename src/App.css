@@ -88,7 +88,7 @@ margin-bottom: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #4CAF50;  /* Green background */
+  background-color: #303434; 
   border-radius: 50%;
   margin-right: 8px;  /* Space between icon and text */
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -108,7 +108,11 @@ margin-bottom: 20px;
   fill: yellow;  /* Change icon color on hover */
 }
 .phone-para{
-  font-size: 17px;
+  font-size: 18px;
+}
+.ordered-list{
+  margin: 5px;
+  font-size: 18px;
 }
 h3{
   font-size: 24px !important;
@@ -126,12 +130,15 @@ h3{
 .footer-links{
   display: flex;
   list-style: none;
+  padding: 0px;
+  margin: 0px;
+  justify-content: space-between;
 }
 .footer-links>li{
   font-size: 12px;
   margin-top: 15px;
   width: 100px;
-  padding: 0px;
+  text-align: center;
 }
 .footer-links>li>a{
   text-decoration: none;
@@ -147,10 +154,10 @@ h3{
 }
 .address{
   margin: 6% 0% 2% 4%;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
   display: flex;
-  gap: 10px;
+  gap: 0px;
 }
 .phone-caller{
   position: sticky;
@@ -163,26 +170,30 @@ hr {
   opacity: unset !important;
 }
 .phone{
-  width: 50px;
-  height: 50px;
-  border-radius: 2rem;
-  padding: 10px;
-  background-color: green;
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 2rem;
+    padding: 10px;
+    background-color: #303434;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    border: 2px solid white;
 }
 .whattsapp{
   width: 50px;
   height: 50px;
   border-radius: 2rem;
   padding: 10px;
-  background-color: green;
+  background-color: #303434;
   position: fixed;
   bottom: 10px;
   right: 10px;
+  border: 2px solid white;
 }
-
+.about-us-container{
+  padding: 5% 14.455%;
+}
 /* for small smart phones */
 @media only screen and (max-width:376px) {
 hr{
@@ -193,16 +204,33 @@ hr{
 }
 /* for smartphones */
   @media only screen and (max-width:767px){
+    .phone-para{
+      font-size: 14px;
+    }
+    .ordered-list{
+      font-size: 14px;
+    }
+    .delivery-area{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 80%;
+    padding-bottom: 80%;
+    }
+    .about-us>h3{
+      font-size: 20px !important;
+    }
+    .about-us>p{
+      font-size: 12px
+    }
+    .about-us-container{
+      padding-top: 5%;
+    }
     .my-footer{
       display: block;
     }
     .social-media>a>svg{
       width: 30px !important;
       height: 30px !important;
-    }
-    .footer-links{
-      padding-left: 5%;
-      justify-content: space-between;
     }
     .my-footer>.my-logo{
       width: 90%;
@@ -250,12 +278,37 @@ hr{
      }
   }
 /* for tablets */
-  @media screen and (max-width: 1023px) and (min-width:768px){
+  @media screen and (max-width: 1024px) and (min-width:768px){
+    .text{
+      font-size: 1.7rem;
+    }
+    .text>p{
+      font-size: 1.5rem;
+    }
+    .delivery-area{
+      text-align: center;
+      font-size: 62px;
+      padding-top: 63%;
+      padding-bottom: 63%;
+    }
+    .about-us-container{
+      padding-top: 10%;
+    }
+    .about-us>p{
+      font-size: 20px;
+        margin-bottom: 70px;
+    }
+    .about-us>h3{
+      font-size: 30px !important;
+    }
+    .address{
+      gap: 10px;
+    }
     .tablet{
       width: 100% !important;
     }
     .icon{
-      width:10%;
+      width:8%;
       display: block;
       position: absolute;
       right: 1%;
@@ -288,9 +341,31 @@ hr{
       color: white;
      }
   }
+  /* for 1024 width  ipad pro */
+  @media only screen and (width:1024px) {
+    .icon{
+      width: 7%;
+    }
+  }
 
   /* for laptop and desktops */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
+  .delivery-area{
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 14%;
+    padding-bottom: 14%;
+  }
+  .about-us>h3{
+    font-size: 30px !important;
+  }
+  .about-us>p{
+    font-size: 18px;
+    margin-bottom: 5%;
+  }
+  .address{
+    gap: 10px;
+  }
   h2{
     font-size: 25px !important;
   }
@@ -321,3 +396,10 @@ hr{
     width: 325px;
   }
  }
+/* for surface duo */
+@media only screen and (width:540px) and (height:720px) {
+  .icon{
+    width: 10%;
+  }
+  
+}

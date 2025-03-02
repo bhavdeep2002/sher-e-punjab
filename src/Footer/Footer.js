@@ -47,9 +47,9 @@ export default function Footer() {
             </div>
           </div>
           <ul className='footer-links'>
-            <li><a href='#'>HOME</a></li>
-            <li> <a href='#about-us'>ABOUT US</a></li>
-            <li><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bhavdeepbhamra@gmail.com'>EMAIL US</a></li>
+            <li><a href='/'>HOME</a></li>
+            <li> <a href='/about-us'>ABOUT US</a></li>
+            <li style={{marginLeft:"5px"}}><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bhavdeepbhamra@gmail.com'>EMAIL US</a></li>
           </ul>
         </div>
         <div className='address'>

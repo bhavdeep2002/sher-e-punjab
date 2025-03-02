@@ -13,15 +13,13 @@ export default function ImageSlider() {
                         <div className="carousel-item active">
                             <img src="/image/photo1.png" className="d-block w-100" alt="..." />
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
+                                <h5 style={{fontSize:"3.25rem"}}>Service and Food at It's Best</h5>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <img src="/image/photo2.png" className="d-block w-100" alt="..." />
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
+                                <h5 style={{fontSize:"3.25rem"}}>We Make Your Events Memorable</h5>
                             </div>
                         </div>
                     </div>
