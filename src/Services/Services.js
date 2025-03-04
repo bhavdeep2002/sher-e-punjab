@@ -12,16 +12,16 @@ export default function Services() {
         <div style={{padding:"2% 14.455% 2% 14.455%"}} className='container-flex'>
           <div className='row'>
             <div className='col-md-6'>
-              <h2>SHER - E - Punjab  CATERING SERVICES VERTICALS.</h2>
+              <h2>SHER - E - PUNJAB  CATERING SERVICES VERTICALS.</h2>
               <ul className="service-list">
                 {list1.map((li, index) => {
-                  return <li key={index}><div style={{display:"flex"}}><img style={{width:"20px",height:"20px",marginRight:"5px"}} src='image/logo2.PNG'/>{li}</div></li>
+                  return <li key={index}><div style={{display:"flex"}}><img style={{width:"20px",height:"20px",marginRight:"5px"}} src='image/logo2.png'/>{li}</div></li>
                 })}
               </ul>
             </div>
 
             <div className='col-md-6'>
-              <h2>WHY SHOULD YOU CHOOSE US FOR PARTY CATERING SERVICES IN Maharashtra?</h2>
+              <h2>WHY SHOULD YOU CHOOSE US FOR PARTY CATERING SERVICES IN MAHARASHTRA?</h2>
               <ul className="service-list">
                 {list2.map((li, index) => {
                   return <li key={index}> <div style={{display:"flex"}}><svg className='tick' width="20" height="20" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg">

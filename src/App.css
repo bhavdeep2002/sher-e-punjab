@@ -1,6 +1,11 @@
 html ,body{
   overflow-x: hidden;
 }
+.carousel-item img {
+   /* Adjust height as needed */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
 .my-navbar{
   color: white;
   background-color: #303434;
@@ -27,6 +32,7 @@ html ,body{
   padding: 0px;
   list-style: none;
   margin-top: 24px;
+  font-size: 1rem;
 }
 h2{
  font-weight: bolder !important;
@@ -83,8 +89,8 @@ margin-bottom: 20px;
   flex-shrink: 0;
 }
 .phone-icon-circle {
-  width: 32px;
-  height: 32px;
+  width: 1.5rem;
+  height: 1.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +102,8 @@ margin-bottom: 20px;
 
 .phone-icon-circle svg {
   transition: fill 0.3s ease;
+  width:20px;
+  height:20px;
 }
 
 /* Hover effect */
@@ -108,11 +116,12 @@ margin-bottom: 20px;
   fill: yellow;  /* Change icon color on hover */
 }
 .phone-para{
-  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 10%;
 }
 .ordered-list{
-  margin: 5px;
-  font-size: 18px;
+  margin: 0% 1% 10% 1%;
+  font-size: 1rem;
 }
 h3{
   font-size: 24px !important;
@@ -129,35 +138,25 @@ h3{
 }
 .footer-links{
   display: flex;
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  justify-content: space-between;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    gap: 30px;
+    justify-content: space-between;
 }
 .footer-links>li{
   font-size: 12px;
   margin-top: 15px;
-  width: 100px;
+  width: max-content;
   text-align: center;
 }
 .footer-links>li>a{
   text-decoration: none;
   color: white;
 }
-.social-media{
-  display: flex;
-  justify-content: space-evenly;
-}
-.social-media>a{
-  text-decoration: none;
-  color: white;
-}
-.address{
-  margin: 6% 0% 2% 4%;
-  font-size: 14px;
-  font-weight: 700;
-  display: flex;
-  gap: 0px;
+
+.location-icon{
+  width: 20px;
 }
 .phone-caller{
   position: sticky;
@@ -173,18 +172,24 @@ hr {
     width: 50px;
     height: 50px;
     border-radius: 2rem;
-    padding: 10px;
     background-color: #303434;
     position: fixed;
     bottom: 10px;
     left: 10px;
     border: 2px solid white;
 }
+.phone>a>svg{
+  position: absolute;
+  top: 15px;
+  width: 19px;
+  height: 19px;
+  left: 13px;
+}
 .whattsapp{
   width: 50px;
   height: 50px;
   border-radius: 2rem;
-  padding: 10px;
+  padding: 8px;
   background-color: #303434;
   position: fixed;
   bottom: 10px;
@@ -194,21 +199,46 @@ hr {
 .about-us-container{
   padding: 5% 14.455%;
 }
+.about-us-p{
+text-indent: 137.587px;
+}
 /* for small smart phones */
 @media only screen and (max-width:376px) {
 hr{
   margin-top: 2.4% !important;
   margin-bottom: 2.4% !important;
 }
-  
+  .location-icon{
+    width: 18px !important;
+  }
+  .address{
+    font-size: 8px;
+  }
 }
 /* for smartphones */
   @media only screen and (max-width:767px){
-    .phone-para{
-      font-size: 14px;
+    .address{
+    font-size: 8px;
+    padding: 6% 8% 2% 8%;
+    font-weight: 700;
+    display: flex;
+    gap: 10px;
+    text-align: left;
+    align-items: flex-start;
     }
-    .ordered-list{
-      font-size: 14px;
+    .address>.location-container>a>svg{
+      width: 20px;
+      position: relative;
+      top: 0px;
+    }
+    .phone-icon-circle svg {
+      transition: fill 0.3s ease;
+      width:24px;
+      height:24px;
+    }
+    .phone-icon-circle {
+      width: 2rem;
+      height: 2rem;
     }
     .delivery-area{
     text-align: center;
@@ -220,7 +250,10 @@ hr{
       font-size: 20px !important;
     }
     .about-us>p{
-      font-size: 12px
+      font-size: 15px
+    }
+    .about-us-p{
+      text-indent: 91.73px;
     }
     .about-us-container{
       padding-top: 5%;
@@ -228,17 +261,10 @@ hr{
     .my-footer{
       display: block;
     }
-    .social-media>a>svg{
-      width: 30px !important;
-      height: 30px !important;
-    }
     .my-footer>.my-logo{
       width: 90%;
       margin-left: 3%;
       margin-right: 3%;
-    }
-    .address{
-      text-align: center;
     }
     .footer-container{
       padding-top:6% ;
@@ -279,6 +305,20 @@ hr{
   }
 /* for tablets */
   @media screen and (max-width: 1024px) and (min-width:768px){
+    .address {
+      font-size: 13px;
+      padding: 5% 2% 2% 2%;
+      font-weight: 700;
+      display: flex;
+      gap: 10px;
+      text-align: left;
+      align-items: flex-start;
+  }
+  .location-icon{
+    width: 25px;
+    position: relative;
+    top: 4px;
+  }
     .text{
       font-size: 1.7rem;
     }
@@ -346,6 +386,11 @@ hr{
     .icon{
       width: 7%;
     }
+    .location-icon {
+      width: 18px;
+      position: relative;
+      top: 0px;
+  }
   }
 
   /* for laptop and desktops */
@@ -363,9 +408,20 @@ hr{
     font-size: 18px;
     margin-bottom: 5%;
   }
-  .address{
+  .address {
+    font-size: 13px;
+    padding: 5% 2% 2% 2%;
+    font-weight: 700;
+    display: flex;
     gap: 10px;
-  }
+    text-align: left;
+    align-items: flex-start;
+}
+.location-icon{
+  width: 18px;
+  position: relative;
+  top: 0px;
+}
   h2{
     font-size: 25px !important;
   }

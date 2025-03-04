@@ -33,9 +33,19 @@ export default function Header() {
     else if(window.innerWidth===320 && window.innerHeight===568){
       setVertical((prev) => prev === 30 ? 0 : 30)
     }
+    // next hub
+    else if(window.innerWidth===1024 && window.innerHeight===600){
+      setVertical((prev) => prev === 65 ? 0 : 65)
+    }
+    // surface duo
+    else if(window.innerWidth===540 && window.innerHeight===720){
+      setVertical((prev) => prev === 35 ? 0 : 35)
+    }
+    // tablets
     else if(window.innerWidth/window.innerHeight>=0.694 && window.innerWidth/window.innerHeight<=0.75){
       setVertical((prev) => prev === 30 ? 0 : 30)
     }
+    // smart phones
     else{
     setVertical((prev) => prev === 25 ? 0 : 25)
     }
@@ -46,7 +56,7 @@ export default function Header() {
         <div className='col-md-12'>
           <div className='my-navbar'>
             <div className='my-logo'>
-              <img style={{ width: "100%" }} src='/image/logotext2.JPG' alt='logo' />
+              <a href='/'><img style={{ width: "100%" }} src='/image/logotext2.jpg' alt='logo' /></a>
             </div>
             <div className='my-navlink-container'>
               <ul className='my-navlink'>
