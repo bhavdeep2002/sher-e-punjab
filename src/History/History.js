@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function History({heading,para,className}) {
+export default function History({heading,para}) {
   return (
     <>   <h3>{heading}</h3>
-    <p className={className} dangerouslySetInnerHTML={{ __html: para }}></p></>
+    <p dangerouslySetInnerHTML={{ __html: para }}></p></>
   )
 }

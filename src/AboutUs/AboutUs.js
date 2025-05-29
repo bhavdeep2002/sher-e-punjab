@@ -13,11 +13,7 @@ export default function AboutUs() {
               <div className='row'>
                 <div className='col-md-12 about-us'>
                 {history.map((i, index) => {
-                  return index > 0 ? (
-                    <History key={index} heading={i.heading} para={i.para} />
-                  ) : (
-                    <History key={index} className="about-us-p" heading={i.heading} para={i.para} />
-                  );
+                  return <History key={index} heading={i.heading} para={i.para} />
                 })}
                 
                   <p  style={{marginTop:"3%"}}>Then in 2017, I opened my own small DHABA called as SHER- E- PUNJAB. I worked very hard with my father for that small business. From 2017 to 2025, we turn that small family dhaba into a big family dhaba, in the name of Sher e punjab 
